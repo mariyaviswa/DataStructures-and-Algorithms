@@ -108,7 +108,8 @@ class LinkedList:
         while itr:
             print(f"{itr.data} -> ", end="")
             itr = itr.next
-
+        print("None")
+        
 # Initialize the class
 ll = LinkedList()
 

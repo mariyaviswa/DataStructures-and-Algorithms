@@ -107,7 +107,7 @@ class linkedList:
         while itr:
             s += f'{itr.data} --> '
             itr = itr.next
-        print(s)
+        print(s + "None")
 
 
 ll = linkedList()
