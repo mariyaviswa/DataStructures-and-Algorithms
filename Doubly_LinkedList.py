@@ -101,7 +101,7 @@ class DoublyLinkedList:
 
 if __name__ == '__main__':
 
-    dll = DoublyList()
+    dll = DoublyLinkedList()
 
     # Insert data at Beginning
     dll.insert_at_beginning(3)
