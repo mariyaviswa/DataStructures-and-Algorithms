@@ -4,10 +4,10 @@ class Node:
         self.data = data
         self.next = next
 
-class DoublyList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
-    
+     
     def insert_at_beginning(self, data):
         node = Node(data=data)
         if self.head is None:
@@ -19,6 +19,10 @@ class DoublyList:
         self.head = node
 
     def insert_at_end(self, data):
+        if self.head is None:
+            self.head = Node(data = data)
+            return 
+        
         curr = self.head
 
         while curr.next:
@@ -59,6 +63,30 @@ class DoublyList:
         curr.next = node
         node.prev = curr
 
+    def remove_by_value(self, value):
+        curr = self.head
+
+        # If head is the given value
+        if curr.data == value:
+            if self.head.next:
+                self.head = self.head.next
+                self.head.prev = None
+                return
+            
+            else:
+                self.head = None
+                return 
+
+        while curr.next and curr.next.data != value:
+            curr = curr.next
+
+        curr.next = curr.next.next
+        curr.next.next.prev = curr    
+    
+    def insert_values(self, values):
+        self.head = None  # Create a New DLL
+        for val in values:
+            self.insert_at_end(val)
 
     def display(self):
         curr = self.head
@@ -96,5 +124,13 @@ if __name__ == '__main__':
     # Insert data after particular value
     dll.insert_after_value(4, 7)
     dll.insert_after_value(6, 8)
+
+    # Remove data from list
+    dll.remove_by_value(3)
+    dll.remove_by_value(7)
+    
+    # Insert Bulk Values 
+    dll.insert_values(["Apple", "Orange", "Mango", "Grapes", "Banana", "Cherry"])
+
     # Display your list
     dll.display()
