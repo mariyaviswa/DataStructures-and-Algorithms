@@ -109,48 +109,48 @@ class linkedList:
             itr = itr.next
         print(s + "None")
 
+if __name__ == '__main__':
+    ll = linkedList()
+    # Insert at beginning
 
-ll = linkedList()
-# Insert at beginning
+    ll.insert_at_beginning(4)
+    ll.insert_at_beginning(3)
+    ll.insert_at_beginning(2)
+    ll.insert_at_beginning(1)
+    print("After insertion at beginning: ")
+    ll.print()
 
-ll.insert_at_beginning(4)
-ll.insert_at_beginning(3)
-ll.insert_at_beginning(2)
-ll.insert_at_beginning(1)
-print("After insertion at beginning: ")
-ll.print()
+    # Insert at end
+    ll.insert_at_end(5)
+    print("After insert at index 5: ")
+    ll.print()
 
-# Insert at end
-ll.insert_at_end(5)
-print("After insert at index 5: ")
-ll.print()
+    # get the linked list length
 
-# get the linked list length
+    length = ll.get_length()
+    print("length of linked list: ", length)
 
-length = ll.get_length()
-print("length of linked list: ", length)
+    # remove at index
+    ll.remove_at_index(1)
+    print("After removing the index 1: ")
+    ll.print()
 
-# remove at index
-ll.remove_at_index(1)
-print("After removing the index 1: ")
-ll.print()
+    # insert at index
+    ll.insert_at_index(1, 2)
+    print("After inserting at index 1: ")
+    ll.print()
 
-# insert at index
-ll.insert_at_index(1, 2)
-print("After inserting at index 1: ")
-ll.print()
+    # insert values as list
+    ll.insert_values(["apple", "orange", "banana", "grapes"])
+    print("After inserting values: ")
+    ll.print()
 
-# insert values as list
-ll.insert_values(["apple", "orange", "banana", "grapes"])
-print("After inserting values: ")
-ll.print()
+    # remove by value
+    ll.remove_by_value("grapes")
+    print("After removing the value: ")
+    ll.print()
 
-# remove by value
-ll.remove_by_value("grapes")
-print("After removing the value: ")
-ll.print()
-
-# insert after values
-ll.insert_after_values("banana", "mango")
-print("After inserting: ")
-ll.print()
+    # insert after values
+    ll.insert_after_values("banana", "mango")
+    print("After inserting: ")
+    ll.print()

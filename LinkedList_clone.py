@@ -109,35 +109,37 @@ class LinkedList:
             print(f"{itr.data} -> ", end="")
             itr = itr.next
         print("None")
-        
-# Initialize the class
-ll = LinkedList()
 
-# Insert at beginning
-ll.insert_at_beginning(5)
-ll.insert_at_beginning(3)
-ll.insert_at_beginning(4)
 
-# insert after particular value
-ll.insert_after_value(3, 7)
+if __name__ == '__main__':    
+    # Initialize the class
+    ll = LinkedList()
 
-# insert values as bulk(list of values)
-ll.insert_values([8, 6, 4, 3])
+    # Insert at beginning
+    ll.insert_at_beginning(5)
+    ll.insert_at_beginning(3)
+    ll.insert_at_beginning(4)
 
-# remove the value at beginning
-ll.remove_at_beginning()
+    # insert after particular value
+    ll.insert_after_value(3, 7)
 
-# remove the value at end 
-ll.remove_at_end()
+    # insert values as bulk(list of values)
+    ll.insert_values([8, 6, 4, 3])
 
-# insert at particular index
-ll.insert_at_index(3, 6)
+    # remove the value at beginning
+    ll.remove_at_beginning()
 
-# remove value in particular index
-ll.remove_at_index(0)
+    # remove the value at end 
+    ll.remove_at_end()
 
-# remove by value
-ll.remove_by_value(4)
+    # insert at particular index
+    ll.insert_at_index(3, 6)
 
-# print the linked list
-ll.print()
+    # remove value in particular index
+    ll.remove_at_index(0)
+
+    # remove by value
+    ll.remove_by_value(4)
+
+    # print the linked list
+    ll.print()
