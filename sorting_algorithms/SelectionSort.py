@@ -2,9 +2,12 @@
 Selection Sort
 --------------
 
-    *At each iteration
-    *set the curr value as min value
-    *then search in whole array if any value less than our fixed value
+=====
+Select the correct min/max element for that position.
+=====
+    * At each iteration
+    * set the curr value as min value
+    * then search in whole array if any value less than our fixed value
       then set it as min value and swap with the current element
 """
 

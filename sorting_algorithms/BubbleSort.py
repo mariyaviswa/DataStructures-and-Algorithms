@@ -4,6 +4,10 @@ Bubble Sort
 Time Complexity - O(n^2)
 Space Complexity  - O(1)
 
+=====
+Bubble-Up the larger elements to the top of the list.
+=====
+
 Basically it's checking and compare each element from start index 0 to last index
 if meet the condition it will swap the elements
 if n = 5 , arr = [5, 3, 8, 6, 7, 2]
