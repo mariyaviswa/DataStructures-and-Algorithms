@@ -1,3 +1,5 @@
+from typing import List
+
 """
 Merge Sort
 ----------
@@ -9,7 +11,7 @@ Space complexity - O(n)
 """
 
 
-def merge(arr: list[int], L: int, MID: int, R: int) -> None:
+def merge(arr: List[int], L: int, MID: int, R: int) -> None:
     left = arr[L: MID + 1]
     right = arr[MID + 1: R + 1]
     i, l, r = L, 0, 0

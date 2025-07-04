@@ -109,6 +109,7 @@ class linkedList:
             itr = itr.next
         print(s + "None")
 
+
 if __name__ == '__main__':
     ll = linkedList()
     # Insert at beginning
